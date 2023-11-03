@@ -1,0 +1,50 @@
+{
+	"name": "Deep Speech 2",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "tensorflow/tensorflow:2.6.0-gpu",
+	"runArgs": [
+		"--gpus=0"
+	],
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {
+	// 	"ghcr.io/devcontainers/features/git:1": {}
+	// },
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "updateContentCommand": [
+	// 	"bash",
+	// 	"./.devcontainer/script.sh"
+	// ],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.pylint",
+				"ms-python.autopep8",
+				"yzhang.markdown-all-in-one",
+				"shd101wyy.markdown-preview-enhanced",
+				"davidanson.vscode-markdownlint",
+				"joshbolduc.commitlint",
+				"ms-toolsai.jupyter",
+				"natqe.reload",
+				"shardulm94.trailing-spaces",
+				"vscode-icons-team.vscode-icons"
+			],
+			"settings": {
+				"[python]": {
+					"diffEditor.ignoreTrimWhitespace": false,
+					"editor.formatOnType": true,
+					"editor.wordBasedSuggestions": false,
+					"editor.defaultFormatter": "ms-python.autopep8"
+				}
+			}
+		}
+	},
+	"shutdownAction": "none"
+}
